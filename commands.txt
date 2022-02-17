@@ -1,0 +1,230 @@
+cat to show content of a file
+vi editior
+ls list 
+i insert
+ls:a all contents
+ls:al all content plus permission
+sudu su-  to see which user you are 
+ifconfig 
+mkdir make a new folder/directory
+e.g mkdir test  it means test dir/folder is created 
+to check give ls command
+ls to see the lost
+if something starts with d its a directory
+- means just a file
+clear to clear everything
+pwd persent working directory
+
+
+touch command to create a file 
+e.g touch nk.txt (nk.txt is your file)
+these are dummy files nothing in it
+to create 100 files
+
+touch {1 ..100}.nk
+
+to create a content in the file
+echo "hi"> nk
+
+to remove
+rm {1..100}nk
+y yes
+
+
+to remove all files 
+rm*nk.txt
+
+can i do yes one time 
+rm-rf*nk.txt   (remove all at once)
+echo hello>>nk
+
+in linux to take help you can give man command
+man touch
+to quit give q
+man cat ( cat command info)
+
+rmdir nk.txt
+
+what is kernel
+
+its a mediator communicator between operating systmen and hardware
+
+how to chech kernel version in linux
+uname -a  
+hostname (to check the hostname)
+man uname ( to get help about kernel version)
+uname -s (to check the name)
+uname -v ( to check the kernel version)
+cat /etc/os-release ( to see the operating system type)
+rm -rffilename (forcely remove file)
+w ( to see how many users into the instance loginned )
+whoami ( to see if i am a root user or ec2 user or someone else )
+top ( to see the processors running in the system)
+
+mkdir nk
+cd 
+cp * nk
+vi (editor)
+vi
+press esc insert :wq!
+nano
+rm -rf nk*
+permission on file and directory
+rm-rf nk*
+ls -all
+^c
+r (r means read) 4
+w (w means write) 2
+x (x means execute) 1
+rw-r-r (user group owner)
+r means4
+write means 2
+execute means 1
+
+chmod 700 nk ( to change permissions)
+chmod 777 ( to give permission to everyone)
+chmod 755 ( to give permissions to group and others)
+chown ( change owner who can be able to read write execute)
+777 (owner group other )
+inode ( it means index nodes)
+ls -li (to see inode for the file)
+two types of inode links
+soft links ( symbolic link like a short link for windows)
+ln -s nk childnk
+y
+in soft link if parent file is deleted child file will be deleted
+rm 
+
+
+chmod
+
+cat nk greep |name ( to see specific thing in a file)
+greep command cat filename greep | name
+
+pipe | ( to use two command atonce)
+nano nk
+sort nk( to sort )
+find / (search complete linus)
+find .  (search specific file)
+f to find file
+d to find directory
+
+
+
+how to check what processor are running
+ps command
+ htop command
+ uptime
+top command
+
+cat/etc ( which linux you are using)
+
+how to stop services
+yum install httpd(hippatchi software)
+
+Adding Disks and creating partions to linux Server
+
+1. Add an additional 15GB drive to the server
+
+2. Check the block devices connected to the server
+lsblk
+df -h
+
+3. For new disk create three partions 3 * 5GB,5GB,4.9G
+fdisk /dev/<***>
+
+4. create file system on all 3 drives using "mkfs.ext4" or ext3
+mkfs.ext4 /dev/<***>
+mkfs.ext4 /dev/<***>
+mkfs.ext4 /dev/<***>
+
+5. create 3 folders and name it as test1, test2, test3
+mkdir /test1
+mkdir /test2
+mkdir /test3
+
+command: df -h
+
+6. mount 3 partions to the folder and add some files.
+
+mount /dev/<***>   /test1
+mount /dev/<***>   /test2
+mount /dev/<***>   /test3
+
+df -h
+
+create some files in this test directory to test it.
+
+
+7. Reboot the server and check the created files are appreared or not
+
+8. edit /etc/fstab ( in or…
+
+
+
+What is Cron and crontab
+
+cron is time
+23
+cd /etc 
+# For details see man 4 crontabs
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+
+30 21 * feb (0-6)
+*/30 * * * *   (*/30 means every 30 minutes)
+
+crontab guru ( website on google for help)
+crontab -l  to check any cron running
+crontab -e  to edit a cron job
+crontab -r   to remove cronjob and it will remove all cronjob
+crontab -u ec2-user -l  to see the user of cronjob
+
+
+Firewall Inbound and Outbound
+ping command works on ICMP ( for security Org not allow ping) with ICMP
+change the security settings in AMC Instance inbound rules
+how to check connectivity between two machines
+ping command
+telnet comand ( we use this command in organizations)
+to install telnet
+yum install telnet
+
+telnet -h
+telnet IPaddress portno (22 ssh)
+netstat -a | grep -i tupln
+netstat -s | grep -i tupln
+yum install http -y
+SYSTEMctl STATUS HTTPD
+
+
+host file 
+nano /etc/hosts
+put ipaddress of other machine(press tab) (give name)
+ipaddress of machine (press tab) (give name)
+
+ping name
+which dns resolve hostname to ip
+nslookup
+dig
+nslookup www.amazon.com
+dig www.amazon.com
+
+host www.facebook.com
+netstat -a ( to see which ports are listening)
+
+tupln  t means tcp
+       u means udp
+       p means port
+       ln means listening
+yum update ( if you want to update or install packages 
+ping -c5 ip  (-c means how many time you want to ping)
+root -n 
+( any thing ending with .1 is the gateway)
