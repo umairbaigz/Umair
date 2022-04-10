@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-       stage("umair") {
+       stage("build") {
            steps {
-               echo 'this is me'
+               echo 'chawla na maar '
            }
        }
-       stage("hussain") {
+       stage("test") {
            steps {
-               echo 'this is my kaka'
+               echo 'aida tu hero'
            }
        }
-       stage("zahra zunaira") {
+       stage("deploy") {
            steps {
-               echo 'these are my kakiya'
+               echo 'ho gya kam kaka'
            }
        }
     }
