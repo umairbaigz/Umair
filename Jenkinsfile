@@ -3,7 +3,7 @@ pipeline {
     stages {
        stage("build") {
            steps {
-               echo 'chawla na maar '
+               echo 'Sufi '
            }
        }
        stage("test") {
